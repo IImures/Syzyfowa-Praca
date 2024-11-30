@@ -15,7 +15,7 @@ namespace Player
         private Vector2 _wallDirection;
         private float _xInput;
         private float _currentVelocity;
-        private float _rayLength = 1.0f;
+        private float _rayLength =2.0f;
 
 
         private Rigidbody2D _rb;
