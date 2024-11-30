@@ -86,6 +86,7 @@ namespace Player
 
         private void Climb()
         {
+            Debug.Log("Climb");
             transform.position = new Vector2(transform.position.x,transform.position.y + _yInput * playerConfig.climbSpeed);
             _rb.velocity = new Vector2(_currentVelocity, 0);
         }
@@ -141,6 +142,7 @@ namespace Player
         {
             _canMoveVertically = !_canMoveVertically;
             _rb.gravityScale = _canMoveVertically?0:1;
+            Debug.Log("toggle to "+_canMoveVertically);
         }
         
     }
