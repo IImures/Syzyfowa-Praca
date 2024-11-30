@@ -11,7 +11,7 @@ public class DragReporter : MonoBehaviour
 
     private Vector2 _endPos;
 
-    public Vector2 dragVector;
+    private Vector2 dragVector;
     
     private Vector2 GetMousePosition()
     {
@@ -22,7 +22,6 @@ public class DragReporter : MonoBehaviour
     {
         _isDragging = false;
         dragVector = _endPos - _startPos;
-        Debug.Log(dragVector);
     }
 
     private void OnMouseDrag()
@@ -34,5 +33,17 @@ public class DragReporter : MonoBehaviour
     {
         _isDragging = true;
         _startPos = GetMousePosition();
+    }
+
+    public Vector2 ConsumeDrag()
+    {
+        var tmp = dragVector;
+        dragVector = new Vector2(0,0);
+        return tmp;
+    }
+
+    public bool DragPerformed()
+    {
+        return dragVector.x != 0 || dragVector.y != 0;
     }
 }
