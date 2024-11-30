@@ -5,7 +5,7 @@ using UnityEngine.UIElements;
 namespace Player
 {
     [RequireComponent(typeof(Rigidbody2D))]
-    [RequireComponent(typeof(CircleCollider2D))]
+    [RequireComponent(typeof(BoxCollider2D))]
     public class PlayerMovement : MonoBehaviour
     {
 
@@ -17,10 +17,12 @@ namespace Player
         private float _xInput;
         private float _yInput;
         private float _currentVelocity;
+        private float _rayLength = 1.0f;
 
 
         private Rigidbody2D _rb;
-
+        
+        [SerializeField]private LayerMask groundLayer;
         [SerializeField]private PlayerConfig playerConfig;
 
 
@@ -33,6 +35,7 @@ namespace Player
         {
             _xInput = Input.GetAxis("Horizontal");
             _yInput = Input.GetAxis("Vertical");
+            AlignToSlope();
             Flip();
         }
         
@@ -42,6 +45,25 @@ namespace Player
             Move();
             if(_canMoveVertically){
                 Climb();
+            }
+        }
+        
+        void AlignToSlope()
+        {
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, _rayLength, groundLayer);
+
+            if (hit.collider != null)
+            {
+                Vector2 slopeNormal = hit.normal;
+                float targetAngle = Mathf.Atan2(slopeNormal.y, slopeNormal.x) * Mathf.Rad2Deg;
+                float currentAngle = transform.eulerAngles.z;
+                float smoothedAngle = Mathf.LerpAngle(currentAngle, targetAngle - 90, Time.deltaTime * 5); // 5 is rotation time
+                transform.rotation = Quaternion.Euler(0, 0, smoothedAngle);
+            }
+            else
+            {
+                float smoothedAngle = Mathf.LerpAngle(transform.eulerAngles.z, 0, Time.deltaTime * 5);
+                transform.rotation = Quaternion.Euler(0, 0, smoothedAngle);
             }
         }
         

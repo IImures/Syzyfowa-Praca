@@ -15,6 +15,4 @@ MonoBehaviour:
   speed: 4
   acceleration: 4
   deceleration: 4
-  knockBackFreezeTime: 0.2
-  spawnLandingParticlesAtSpeed: 15
   climbSpeed: 0.2
