@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d31b2f062fb0400b8cfe5ad9f60c4b2, type: 3}
   m_Name: PlayerConfig
   m_EditorClassIdentifier: 
-  speed: 10
-  acceleration: 10
-  deceleration: 10
-  knockBackFreezeTime: 0.2
-  spawnLandingParticlesAtSpeed: 15
+  speed: 4
+  acceleration: 4
+  deceleration: 4
+  climbSpeed: 0.2

@@ -15,10 +15,10 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
+  - Background
+  - Ground
+  - Default
+  - Foreground
   - 
   - 
   - 
@@ -40,4 +40,19 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 2979303001
+    locked: 0
+  - name: Ground
+    uniqueID: 362114431
+    locked: 0
+  - name: Default
+    uniqueID: 690764365
+    locked: 0
+  - name: Hazards
+    uniqueID: 759968575
+    locked: 0
+  - name: Foreground
+    uniqueID: 2558544381
     locked: 0
