@@ -33,13 +33,14 @@ namespace Ball
             {
                 VerticalMoveNearPlayer();
             }
-            
+            _rb.gravityScale = _isDragging ? 0 : 1;
         }
 
         public void ToggleDrag()
         {
             _isDragging = !_isDragging;
             _dragDirection = new Vector2(Math.Sign(player.localScale.x),Math.Sign(player.localScale.y));
+            
         }
 
 
