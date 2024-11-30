@@ -12,8 +12,10 @@ namespace Player
         private bool _movementDisabled;
         private bool _isGrounded;
         private bool _isTouchingWall;
+        private bool _canMoveVertically;
         private Vector2 _wallDirection;
         private float _xInput;
+        private float _yInput;
         private float _currentVelocity;
 
 
@@ -30,7 +32,7 @@ namespace Player
         public void Update()
         {
             _xInput = Input.GetAxis("Horizontal");
-            
+            _yInput = Input.GetAxis("Vertical");
             Flip();
         }
         
@@ -38,6 +40,9 @@ namespace Player
         {
             if(_movementDisabled) return;
             Move();
+            if(_canMoveVertically){
+                Climb();
+            }
         }
         
         private void Move()
@@ -55,6 +60,12 @@ namespace Player
             {
                 transform.localScale = new Vector3(Mathf.Sign(_xInput) * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
             }
+        }
+
+        private void Climb()
+        {
+            transform.position = new Vector2(transform.position.x,transform.position.y + _yInput * playerConfig.climbSpeed);
+            _rb.velocity = new Vector2(_currentVelocity, 0);
         }
 
         private void OnCollisionStay2D(Collision2D collision)
@@ -102,6 +113,12 @@ namespace Player
                     break;
                 }
             }
+        }
+
+        public void ToggleVerticalMovement()
+        {
+            _canMoveVertically = !_canMoveVertically;
+            _rb.gravityScale = _canMoveVertically?0:1;
         }
         
     }
