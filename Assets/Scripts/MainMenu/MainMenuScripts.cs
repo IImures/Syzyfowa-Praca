@@ -14,7 +14,7 @@ public class MainMenuScripts : MonoBehaviour
     }
 
     public static void OpenHowToPlay() {
-        
+        SceneManager.LoadScene("HowToPlay"); 
     }
 
     public static void OpenSettings() {
