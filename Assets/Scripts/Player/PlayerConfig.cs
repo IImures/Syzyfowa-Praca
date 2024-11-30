@@ -6,6 +6,8 @@ namespace Player
     public class PlayerConfig : ScriptableObject
     {
         //Player movement
+        public float knockBackFreezeTime = 0.2f;
+        public float climbSpeed = 0.5f;
         public float speed = 4f;
         public float acceleration = 4f;
         public float deceleration = 4f;
