@@ -136,6 +136,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 1049979333}
     m_Modifications:
     - target: {fileID: 552113032216397816, guid: 0c5192e826fc14bd594830a51e50146c, type: 3}
+      propertyPath: m_Transition
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 552113032216397816, guid: 0c5192e826fc14bd594830a51e50146c, type: 3}
+      propertyPath: m_SpriteState.m_HighlightedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 80c42ba8f26944ca98f8fc0aeade5ff1, type: 3}
+    - target: {fileID: 552113032216397816, guid: 0c5192e826fc14bd594830a51e50146c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -167,9 +175,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: HowToPlay
       objectReference: {fileID: 0}
+    - target: {fileID: 1401490179146039168, guid: 0c5192e826fc14bd594830a51e50146c, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1401490179146039168, guid: 0c5192e826fc14bd594830a51e50146c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7426a624af0bc486bacd5c1ebbb78bdc, type: 3}
     - target: {fileID: 3378002194820889593, guid: 0c5192e826fc14bd594830a51e50146c, type: 3}
       propertyPath: m_text
-      value: How to play
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6868576659408086046, guid: 0c5192e826fc14bd594830a51e50146c, type: 3}
       propertyPath: m_Pivot.x
@@ -588,6 +604,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 1049979333}
     m_Modifications:
     - target: {fileID: 552113032216397816, guid: 0c5192e826fc14bd594830a51e50146c, type: 3}
+      propertyPath: m_Transition
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 552113032216397816, guid: 0c5192e826fc14bd594830a51e50146c, type: 3}
+      propertyPath: m_SpriteState.m_HighlightedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 91e8121abf2364107b363d8c537fa7da, type: 3}
+    - target: {fileID: 552113032216397816, guid: 0c5192e826fc14bd594830a51e50146c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -619,9 +643,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Credits
       objectReference: {fileID: 0}
+    - target: {fileID: 1401490179146039168, guid: 0c5192e826fc14bd594830a51e50146c, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1401490179146039168, guid: 0c5192e826fc14bd594830a51e50146c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 60655e873b8734e98bd71c446748f3b1, type: 3}
     - target: {fileID: 3378002194820889593, guid: 0c5192e826fc14bd594830a51e50146c, type: 3}
       propertyPath: m_text
-      value: Credits
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6868576659408086046, guid: 0c5192e826fc14bd594830a51e50146c, type: 3}
       propertyPath: m_Pivot.x
@@ -738,6 +770,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 1049979333}
     m_Modifications:
     - target: {fileID: 552113032216397816, guid: 0c5192e826fc14bd594830a51e50146c, type: 3}
+      propertyPath: m_Transition
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 552113032216397816, guid: 0c5192e826fc14bd594830a51e50146c, type: 3}
+      propertyPath: m_SpriteState.m_HighlightedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3cc4a389c16644204952450b925becc0, type: 3}
+    - target: {fileID: 552113032216397816, guid: 0c5192e826fc14bd594830a51e50146c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -769,9 +809,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Settings
       objectReference: {fileID: 0}
+    - target: {fileID: 1401490179146039168, guid: 0c5192e826fc14bd594830a51e50146c, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1401490179146039168, guid: 0c5192e826fc14bd594830a51e50146c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 49c152f68c08a48c6819691a10c51dba, type: 3}
     - target: {fileID: 3378002194820889593, guid: 0c5192e826fc14bd594830a51e50146c, type: 3}
       propertyPath: m_text
-      value: Settings
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6868576659408086046, guid: 0c5192e826fc14bd594830a51e50146c, type: 3}
       propertyPath: m_Pivot.x
@@ -955,6 +1003,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 552113032216397816, guid: 0c5192e826fc14bd594830a51e50146c, type: 3}
+      propertyPath: m_SpriteState.m_HighlightedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 29eda5475658a4d5393eea7386c87e1a, type: 3}
+    - target: {fileID: 552113032216397816, guid: 0c5192e826fc14bd594830a51e50146c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -986,9 +1038,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Play
       objectReference: {fileID: 0}
+    - target: {fileID: 1401490179146039168, guid: 0c5192e826fc14bd594830a51e50146c, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1401490179146039168, guid: 0c5192e826fc14bd594830a51e50146c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 065ffeebc2fc44850956be8e1e58941d, type: 3}
     - target: {fileID: 3378002194820889593, guid: 0c5192e826fc14bd594830a51e50146c, type: 3}
       propertyPath: m_text
-      value: Play
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6868576659408086046, guid: 0c5192e826fc14bd594830a51e50146c, type: 3}
       propertyPath: m_Pivot.x
