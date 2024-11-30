@@ -542,6 +542,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 944937643}
     m_Modifications:
     - target: {fileID: 552113032216397816, guid: 0c5192e826fc14bd594830a51e50146c, type: 3}
+      propertyPath: m_Transition
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 552113032216397816, guid: 0c5192e826fc14bd594830a51e50146c, type: 3}
+      propertyPath: m_SpriteState.m_HighlightedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 038d9b864d57947ecb254f19aa992e8d, type: 3}
+    - target: {fileID: 552113032216397816, guid: 0c5192e826fc14bd594830a51e50146c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -573,9 +581,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button
       objectReference: {fileID: 0}
+    - target: {fileID: 1401490179146039168, guid: 0c5192e826fc14bd594830a51e50146c, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1401490179146039168, guid: 0c5192e826fc14bd594830a51e50146c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b8ae73ed2dafc4e1b9002a94342354f7, type: 3}
     - target: {fileID: 3378002194820889593, guid: 0c5192e826fc14bd594830a51e50146c, type: 3}
       propertyPath: m_text
-      value: Back
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6868576659408086046, guid: 0c5192e826fc14bd594830a51e50146c, type: 3}
       propertyPath: m_Pivot.x
