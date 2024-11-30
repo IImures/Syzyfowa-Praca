@@ -12,7 +12,7 @@ namespace Player
         private bool _movementDisabled;
         private bool _isGrounded;
         private bool _isTouchingWall;
-        private bool _canMoveVertically;
+        public bool MovingVertically;
         private Vector2 _wallDirection;
         private float _xInput;
         private float _yInput;
@@ -43,7 +43,7 @@ namespace Player
         {
             if(_movementDisabled) return;
             Move();
-            if(_canMoveVertically){
+            if(MovingVertically){
                 Climb();
             }
         }
@@ -140,9 +140,9 @@ namespace Player
 
         public void ToggleVerticalMovement()
         {
-            _canMoveVertically = !_canMoveVertically;
-            _rb.gravityScale = _canMoveVertically?0:1;
-            Debug.Log("toggle to "+_canMoveVertically);
+            MovingVertically = !MovingVertically;
+            _rb.gravityScale = MovingVertically?0:1;
+            Debug.Log("toggle to "+MovingVertically);
         }
         
     }
