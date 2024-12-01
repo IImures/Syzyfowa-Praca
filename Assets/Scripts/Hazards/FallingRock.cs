@@ -24,9 +24,10 @@ namespace Hazards
             _dg.EnableDrag();
         }
 
-        private void OnTriggerEnter2D(Collider2D other) {
-            if (other.tag.Equals("Player")) {
-                PlayerDeath playerDeath = other.GetComponent<PlayerDeath>();
+        private void OnCollisionEnter2D(Collision2D other) {
+            if (other.gameObject.CompareTag("Player") && _dg.isDraggable) {
+                Debug.Log("Test");
+                PlayerDeath playerDeath = other.gameObject.GetComponent<PlayerDeath>();
                 playerDeath.KillPlayer();
             }
         }
