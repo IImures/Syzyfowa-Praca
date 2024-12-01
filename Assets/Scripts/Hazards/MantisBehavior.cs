@@ -33,5 +33,7 @@ public class MantisBehavior : MonoBehaviour
     {
         _lineRenderer.SetPosition(0,mouth.transform.position);
         _lineRenderer.SetPosition(1,player.transform.position);
+        PlayerDeath playerDeath = player.GetComponent<PlayerDeath>();
+        playerDeath.KillPlayer();
     }
 }
