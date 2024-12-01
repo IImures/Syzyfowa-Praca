@@ -6,18 +6,6 @@ using UnityEngine;
 
 public class ClimbToggler : MonoBehaviour
 {
-    
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void Toggle(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))

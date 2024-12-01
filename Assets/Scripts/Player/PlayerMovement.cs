@@ -87,7 +87,6 @@ namespace Player
 
         private void Climb()
         {
-            Debug.Log("Climb");
             transform.position = new Vector2(transform.position.x,transform.position.y + _yInput * playerConfig.climbSpeed);
             _rb.velocity = new Vector2(_currentVelocity, 0);
         }
