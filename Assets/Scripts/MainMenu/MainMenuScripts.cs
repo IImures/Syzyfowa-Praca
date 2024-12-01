@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class MainMenuScripts : MonoBehaviour
 {
     public static void PlayGame() {
-        
+        SceneManager.LoadScene("Disclaimer");
     }
 
     public static void OpenCredits() {
