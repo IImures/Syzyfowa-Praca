@@ -8,6 +8,8 @@ namespace LevelScripts {
     public class LevelUtility : MonoBehaviour {
         [SerializeField] private GameObject pauseMenu;
         private Modal pauseMenuModal;
+        [SerializeField] private string nextLevelName;
+
         
         [SerializeField] private PlayerMovement playerMovement;
 
@@ -49,6 +51,10 @@ namespace LevelScripts {
         
         public void FailedLevel() {
             failedLevel.SetActive(true);
+        }
+
+        public void NextLevel() {
+            SceneManager.LoadScene(nextLevelName);
         }
 
         public void TogglePause() {
