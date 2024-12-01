@@ -10,7 +10,7 @@ namespace Player
     public class PlayerMovement : MonoBehaviour
     {
 
-        private bool _movementDisabled;
+        public bool _movementDisabled;
         private bool _isGrounded;
         private bool _isTouchingWall;
         public bool MovingVertically;
