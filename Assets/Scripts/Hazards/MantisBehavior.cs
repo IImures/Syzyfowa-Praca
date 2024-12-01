@@ -17,7 +17,7 @@ public class MantisBehavior : MonoBehaviour
 
     private void Update()
     {
-        if (Math.Abs(player.GetComponent<Rigidbody2D>().velocity.x) > 1f)
+        if (Math.Abs(player.GetComponent<Rigidbody2D>().velocity.x) > 2f)
         {
             Draw();
         }
