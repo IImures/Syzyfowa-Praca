@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3507303711322903055}
   - component: {fileID: 2529028275974828010}
   - component: {fileID: 255450156687699716}
+  - component: {fileID: 2775805798280844841}
   m_Layer: 0
   m_Name: LevelObjective
   m_TagString: Untagged
@@ -144,3 +145,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelUtility: {fileID: 0}
+--- !u!95 &2775805798280844841
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1330393706870056323}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2603bb1e9032a465a82ff78b2f4a57df, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
