@@ -2050,13 +2050,29 @@ PrefabInstance:
       propertyPath: m_Name
       value: FallingRock
       objectReference: {fileID: 0}
+    - target: {fileID: 1842663059345456169, guid: b17b9513ff6f04915a7eb5083923f183, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1842663059345456169, guid: b17b9513ff6f04915a7eb5083923f183, type: 3}
+      propertyPath: m_TagString
+      value: Hazard
+      objectReference: {fileID: 0}
+    - target: {fileID: 7382747242911347566, guid: b17b9513ff6f04915a7eb5083923f183, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7382747242911347566, guid: b17b9513ff6f04915a7eb5083923f183, type: 3}
+      propertyPath: m_TagString
+      value: Hazard
+      objectReference: {fileID: 0}
     - target: {fileID: 7688250834011201689, guid: b17b9513ff6f04915a7eb5083923f183, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -15.06
+      value: -2.12
       objectReference: {fileID: 0}
     - target: {fileID: 7688250834011201689, guid: b17b9513ff6f04915a7eb5083923f183, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.3639436
+      value: 2.3
       objectReference: {fileID: 0}
     - target: {fileID: 7688250834011201689, guid: b17b9513ff6f04915a7eb5083923f183, type: 3}
       propertyPath: m_LocalPosition.z
