@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d31b2f062fb0400b8cfe5ad9f60c4b2, type: 3}
   m_Name: PlayerConfig
   m_EditorClassIdentifier: 
-  speed: 4
+  knockBackFreezeTime: 0.2
+  climbSpeed: 0.2
+  speed: 5
   acceleration: 4
   deceleration: 4
-  climbSpeed: 0.2
