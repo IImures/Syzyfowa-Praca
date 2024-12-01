@@ -25,13 +25,13 @@ namespace Ball
         private void FixedUpdate()
         {
             if (!_isDragging) return;
-            if (!player.GetComponent<PlayerMovement>().MovingVertically)
+            if (player.GetComponent<PlayerMovement>().MovingVertically)
             {
-                HorizontalMoveNearPlayer();
+                VerticalMoveNearPlayer();
             }
             else
             {
-                VerticalMoveNearPlayer();
+                HorizontalMoveNearPlayer();
             }
             _rb.gravityScale = _isDragging ? 0 : 1;
         }
@@ -66,12 +66,15 @@ namespace Ball
                 _isDragging = false;
                 return;
             }
-            Vector2 targetPosition = Vector2.MoveTowards(
-                transform.position,
-                player.position - new Vector3(0, _dragDirection.y * 1,0),
-                Vector2.Distance(transform.position,player.position)
-            );
-            _rb.MovePosition(targetPosition);
+
+            if(player.position.y>transform.position.y){
+                transform.position=Vector2.MoveTowards(
+                    transform.position,
+                    new Vector2(player.position.x,player.position.y-1),
+                    Vector2.Distance(transform.position, player.position)
+                );
+            }
+            
         }
     }
 }
