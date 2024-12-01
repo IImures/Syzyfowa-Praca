@@ -1795,7 +1795,7 @@ PrefabInstance:
     - target: {fileID: 1113276001593730640, guid: 7a4c7e179dd5d48dab97e7b723d9bbe6, type: 3}
       propertyPath: m_Camera
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1578617427}
     - target: {fileID: 2587154647333021702, guid: 7a4c7e179dd5d48dab97e7b723d9bbe6, type: 3}
       propertyPath: m_Name
       value: LevelUtility
