@@ -1931,6 +1931,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7022200550474923304, guid: 7a4c7e179dd5d48dab97e7b723d9bbe6, type: 3}
+      propertyPath: nextLevelName
+      value: MainMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 7022200550474923304, guid: 7a4c7e179dd5d48dab97e7b723d9bbe6, type: 3}
       propertyPath: playerMovement
       value: 
       objectReference: {fileID: 1597441665}

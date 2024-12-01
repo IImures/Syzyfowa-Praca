@@ -22,6 +22,11 @@ namespace LevelScripts {
             pauseMenuModal = pauseMenu.GetComponent<Modal>();
         }
 
+        public void Start() {
+            PlayerDeath playerDeath = playerMovement.gameObject.GetComponent<PlayerDeath>();
+            playerDeath.SubscribeToDeathEvents(() => {FailedLevel();});
+        }
+
         public void Update() {
             if (Input.GetKeyDown(KeyCode.Escape)) {
                 TogglePause();

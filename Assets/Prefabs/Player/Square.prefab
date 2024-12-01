@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3460635512100582263}
   - component: {fileID: 3422894686787285862}
   - component: {fileID: 7272398917858409503}
+  - component: {fileID: 8977627795842151146}
   m_Layer: 8
   m_Name: Square
   m_TagString: Player
@@ -100,6 +101,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c916f6daa40e54ceabbffa3801de97d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _movementDisabled: 0
+  MovingVertically: 0
   groundLayer:
     serializedVersion: 2
     m_Bits: 2048
@@ -191,3 +194,15 @@ MonoBehaviour:
   ballLayer:
     serializedVersion: 2
     m_Bits: 512
+--- !u!114 &8977627795842151146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4373811659969084126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73df3d752e024b76b4bb943bb65dee87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
