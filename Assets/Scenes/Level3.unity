@@ -303,7 +303,7 @@ GameObject:
   - component: {fileID: 508144732}
   - component: {fileID: 508144731}
   m_Layer: 0
-  m_Name: tlo.sciolka,jasniejszy
+  m_Name: "t\u0142o"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -350,7 +350,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0347644a4a5ff444fbfe36c3e64a632b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9048d2068ad550c4086afa3d6c9eb684, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
