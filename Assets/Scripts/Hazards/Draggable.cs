@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Hazards
 {
@@ -7,7 +8,7 @@ namespace Hazards
     public class Draggable : MonoBehaviour
     {
 
-        private bool _isDraggable = false;
+        [FormerlySerializedAs("_isDraggable")] public bool isDraggable = false;
         private bool _isDragging = false;
         private Vector3 _offset;
         private Rigidbody2D _rb;
@@ -19,7 +20,7 @@ namespace Hazards
 
         void OnMouseDown()
         {
-            if (!_isDraggable) return;
+            if (!isDraggable) return;
             Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             _offset = transform.position - new Vector3(mousePosition.x, mousePosition.y, transform.position.z);
             _isDragging = true;
@@ -42,12 +43,12 @@ namespace Hazards
 
         public void EnableDrag()
         {
-            _isDraggable = true;
+            isDraggable = true;
         }
 
         public void DisableDrag()
         {
-            _isDraggable = false;
+            isDraggable = false;
         }
     }
 }
