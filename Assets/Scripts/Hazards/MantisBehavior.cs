@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Player;
 using UnityEngine;
 
 public class MantisBehavior : MonoBehaviour
@@ -14,9 +15,12 @@ public class MantisBehavior : MonoBehaviour
         _lineRenderer.positionCount = 2;
     }
 
-    private void Start()
+    private void Update()
     {
-        StartCoroutine(Spit());
+        if (Math.Abs(player.GetComponent<Rigidbody2D>().velocity.x) > 1f)
+        {
+            Draw();
+        }
     }
 
     public IEnumerator Spit()
