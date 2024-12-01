@@ -97,7 +97,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: IMG_0262 (1)_0
+      name: Flower1
       rect:
         serializedVersion: 2
         x: 9
@@ -118,7 +118,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IMG_0262 (1)_1
+      name: Flower2
       rect:
         serializedVersion: 2
         x: 72
@@ -139,7 +139,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IMG_0262 (1)_2
+      name: Flower3
       rect:
         serializedVersion: 2
         x: 133
@@ -160,7 +160,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IMG_0262 (1)_3
+      name: Flower4
       rect:
         serializedVersion: 2
         x: 16
@@ -181,7 +181,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IMG_0262 (1)_4
+      name: Flower5
       rect:
         serializedVersion: 2
         x: 81
@@ -202,7 +202,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IMG_0262 (1)_5
+      name: Flower6
       rect:
         serializedVersion: 2
         x: 145
@@ -233,12 +233,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      IMG_0262 (1)_0: 153875930
-      IMG_0262 (1)_1: -1293827851
-      IMG_0262 (1)_2: -1194271717
-      IMG_0262 (1)_3: 1376593514
-      IMG_0262 (1)_4: 992873109
-      IMG_0262 (1)_5: 1696757464
+      Flower1: 153875930
+      Flower2: -1293827851
+      Flower3: -1194271717
+      Flower4: 1376593514
+      Flower5: 992873109
+      Flower6: 1696757464
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
