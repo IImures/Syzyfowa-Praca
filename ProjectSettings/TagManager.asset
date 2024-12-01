@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - LevelObjective
+  - Ball
   layers:
   - Default
   - TransparentFX
@@ -56,4 +57,7 @@ TagManager:
     locked: 0
   - name: Foreground
     uniqueID: 2558544381
+    locked: 0
+  - name: New Layer 6
+    uniqueID: 3996869647
     locked: 0
