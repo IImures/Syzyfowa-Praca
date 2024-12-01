@@ -27,8 +27,8 @@ namespace Player
         void OnDrawGizmosSelected()
         {
             Gizmos.color = Color.yellow;
-            Vector2 attackPosition = (Vector2)transform.position + new Vector2((1f) * Mathf.Sign(transform.localScale.x), 0); // 0.5 is offset of attack
-            Gizmos.DrawWireSphere(attackPosition, 0.75f);
+            Vector2 attackPosition = (Vector2)transform.position + new Vector2((1f) * Mathf.Sign(transform.localScale.x), 0.5f); // 0.5 is offset of attack
+            Gizmos.DrawWireSphere(attackPosition, 1f);
         }
     }
 }

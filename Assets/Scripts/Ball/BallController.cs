@@ -52,10 +52,10 @@ namespace Ball
                 return;
             }
             Vector2 targetPosition = Vector2.MoveTowards(
-                    transform.position,
-                    player.position - new Vector3(_dragDirection.x * -1, 0,0),
-                    followSpeed * Time.deltaTime
-                );
+                transform.position,
+                player.position - new Vector3(_dragDirection.x * -1, 0, 0),
+                Vector2.Distance(transform.position, player.position)
+            );
             _rb.MovePosition(targetPosition);
         }
 
