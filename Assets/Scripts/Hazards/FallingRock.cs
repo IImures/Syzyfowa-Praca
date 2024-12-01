@@ -1,4 +1,5 @@
 using System;
+using Player;
 using UnityEngine;
 
 namespace Hazards
@@ -21,6 +22,13 @@ namespace Hazards
             _rb.constraints = RigidbodyConstraints2D.None;
             _rb.AddForce(Vector2.down);
             _dg.EnableDrag();
+        }
+
+        private void OnTriggerEnter2D(Collider2D other) {
+            if (other.tag.Equals("Player")) {
+                PlayerDeath playerDeath = other.GetComponent<PlayerDeath>();
+                playerDeath.KillPlayer();
+            }
         }
     }
 }
