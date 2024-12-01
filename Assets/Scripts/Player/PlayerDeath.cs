@@ -5,9 +5,14 @@ using UnityEngine.Events;
 namespace Player {
     public class PlayerDeath : MonoBehaviour {
         private UnityEvent _playerDeathEventHandler;
-
+        private Rigidbody2D _rb;
+        private BoxCollider2D _bc;
+        [SerializeField] private float getThrow;
+        
         private void Awake() {
             _playerDeathEventHandler = new UnityEvent();
+            _rb = GetComponent<Rigidbody2D>();
+            _bc = GetComponent<BoxCollider2D>();
         }
 
 
@@ -21,6 +26,9 @@ namespace Player {
 
         public void KillPlayer() {
             _playerDeathEventHandler.Invoke();
+            _rb.AddForce(new Vector2(0, getThrow), ForceMode2D.Force);
+            // _rb.angularVelocity = 5;
+            _bc.enabled = false;
         }
         
         
