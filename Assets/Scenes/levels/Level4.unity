@@ -1176,6 +1176,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelUtility
       objectReference: {fileID: 0}
+    - target: {fileID: 5507782278029125616, guid: 7a4c7e179dd5d48dab97e7b723d9bbe6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6267485081398897608, guid: 7a4c7e179dd5d48dab97e7b723d9bbe6, type: 3}
       propertyPath: m_Pivot.x
       value: 0
