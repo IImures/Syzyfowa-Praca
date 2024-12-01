@@ -8,12 +8,14 @@ namespace LevelScripts {
     public class Modal : MonoBehaviour {
         private int alpha;
         private CanvasGroup canvasGroup;
+        public float fadeDuration = 1f;
+
         private void Awake() {
             canvasGroup = GetComponent<CanvasGroup>();
         }
-
-        private void Update() {
-        }
+        
+        
+        private void Update() { }
 
         public void activateModal() {
             alpha = 0;
@@ -22,16 +24,22 @@ namespace LevelScripts {
         }
 
         private IEnumerator FadeIn() {
-            while (alpha < 255) {
-                alpha += 255 / 60;
-                setAlpha(alpha);
-                yield return new WaitForSeconds(1 / 60);
+            float elapsed = 0f;
+
+            while (elapsed < fadeDuration) {
+                elapsed += Time.deltaTime;
+                float alpha = Mathf.Clamp01(elapsed / fadeDuration);
+
+                if (canvasGroup != null) {
+                    canvasGroup.alpha = alpha; // Adjust transparency
+                }
+
+                yield return null;
+            }
+
+            if (canvasGroup != null) {
+                canvasGroup.alpha = 1; // Ensure fully visible at the end
             }
         }
-        
-        public void setAlpha(float alpha) {
-            canvasGroup.alpha = alpha;
-        }
-        
     }
 }

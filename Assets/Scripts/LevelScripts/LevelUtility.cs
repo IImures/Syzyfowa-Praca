@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 namespace LevelScripts {
     public class LevelUtility : MonoBehaviour {
         [SerializeField] private GameObject pauseMenu;
+        private Modal pauseMenuModal;
+        
         [SerializeField] private PlayerMovement playerMovement;
 
         [SerializeField] private GameObject levelCompleted;
@@ -15,19 +17,12 @@ namespace LevelScripts {
 
         public void Awake() {
             levelCompletedModal = levelCompleted.GetComponent<Modal>();
+            pauseMenuModal = pauseMenu.GetComponent<Modal>();
         }
 
         public void Update() {
             if (Input.GetKeyDown(KeyCode.Escape)) {
-                pauseMenu.SetActive(!pauseMenu.activeSelf);
-                if (pauseMenu.activeSelf) {
-                    playerMovement._movementDisabled = true;
-                    Time.timeScale = 0;
-                }
-                else {
-                    playerMovement._movementDisabled = false;
-                    Time.timeScale = 1;
-                }
+                TogglePause();
             }
         }
 
@@ -54,6 +49,18 @@ namespace LevelScripts {
         
         public void FailedLevel() {
             failedLevel.SetActive(true);
+        }
+
+        public void TogglePause() {
+            pauseMenu.SetActive(!pauseMenu.activeSelf);
+            if (pauseMenu.activeSelf) {
+                playerMovement._movementDisabled = true;
+                Time.timeScale = 0;
+            }
+            else {
+                playerMovement._movementDisabled = false;
+                Time.timeScale = 1;
+            }
         }
         
         
