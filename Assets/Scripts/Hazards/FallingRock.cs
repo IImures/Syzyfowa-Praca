@@ -25,8 +25,7 @@ namespace Hazards
         }
 
         private void OnCollisionEnter2D(Collision2D other) {
-            if (other.gameObject.CompareTag("Player") && _dg.isDraggable) {
-                Debug.Log("Test");
+            if (other.gameObject.CompareTag("Player")) {
                 PlayerDeath playerDeath = other.gameObject.GetComponent<PlayerDeath>();
                 playerDeath.KillPlayer();
             }
