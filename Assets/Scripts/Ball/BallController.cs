@@ -40,7 +40,7 @@ namespace Ball
         {
             _isDragging = !_isDragging;
             _dragDirection = new Vector2(Math.Sign(player.localScale.x),Math.Sign(player.localScale.y));
-            
+            player.gameObject.GetComponent<PlayerMovement>().TogglePushingAnimation();
         }
 
 
@@ -49,6 +49,7 @@ namespace Ball
             if (_dragDirection.x != Math.Sign(player.localScale.x))
             {
                 _isDragging = false;
+                player.gameObject.GetComponent<PlayerMovement>().TogglePushingAnimation();
                 return;
             }
             Vector2 targetPosition = Vector2.MoveTowards(
@@ -64,6 +65,7 @@ namespace Ball
             if (_dragDirection.y != Math.Sign(player.localScale.y))
             {
                 _isDragging = false;
+                player.gameObject.GetComponent<PlayerMovement>().TogglePushingAnimation();
                 return;
             }
 

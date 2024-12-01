@@ -19,9 +19,12 @@ namespace Player
         private float _yInput;
         private float _currentVelocity;
         private float _rayLength =2.0f;
+        private bool _isPushing = false;
 
 
         private Rigidbody2D _rb;
+        private SpriteRenderer _renderer;
+        private Animator _animator;
         
         [SerializeField]private LayerMask groundLayer;
         [SerializeField]private PlayerConfig playerConfig;
@@ -30,12 +33,15 @@ namespace Player
         public void Awake()
         {
             _rb = GetComponent<Rigidbody2D>();
+            _renderer = GetComponent<SpriteRenderer>();
+            _animator = GetComponent<Animator>();
         }
         
         public void Update()
         {
             _xInput = Input.GetAxis("Horizontal");
             _yInput = Input.GetAxis("Vertical");
+            _animator.SetBool("isWalking",Math.Abs(_rb.velocity.x)>0.1f);
             AlignToSlope();
             Flip();
         }
@@ -150,6 +156,12 @@ namespace Player
             MovingVertically = !MovingVertically;
             _rb.gravityScale = MovingVertically?0:1;
             Debug.Log("toggle to "+MovingVertically);
+        }
+
+        public void TogglePushingAnimation()
+        {
+            _isPushing = !_isPushing;
+            _animator.SetBool("isPushing",_isPushing);
         }
         
     }
