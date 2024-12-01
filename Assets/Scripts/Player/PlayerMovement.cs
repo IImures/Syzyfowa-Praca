@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 namespace Player
@@ -101,6 +102,7 @@ namespace Player
         {
             GroundCheck(collision);
             WallCheck(collision);
+            KillCheck(collision);
         }
 
         private void OnCollisionExit2D(Collision2D collision)
@@ -120,6 +122,12 @@ namespace Player
                     _isGrounded = true;
                     break;
                 }
+            }
+        }
+        
+        private void KillCheck(Collision2D collision) {
+            if (collision.gameObject.name == "KillAnt") {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name); //resetuj scenę
             }
         }
         

@@ -33,13 +33,14 @@ namespace Ball
             {
                 VerticalMoveNearPlayer();
             }
-            
+            _rb.gravityScale = _isDragging ? 0 : 1;
         }
 
         public void ToggleDrag()
         {
             _isDragging = !_isDragging;
             _dragDirection = new Vector2(Math.Sign(player.localScale.x),Math.Sign(player.localScale.y));
+            
         }
 
 
@@ -51,10 +52,10 @@ namespace Ball
                 return;
             }
             Vector2 targetPosition = Vector2.MoveTowards(
-                    transform.position,
-                    player.position - new Vector3(_dragDirection.x * -1, 0,0),
-                    followSpeed * Time.deltaTime
-                );
+                transform.position,
+                player.position - new Vector3(_dragDirection.x * -1, 0, 0),
+                Vector2.Distance(transform.position, player.position)
+            );
             _rb.MovePosition(targetPosition);
         }
 
